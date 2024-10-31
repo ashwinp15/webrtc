@@ -1520,7 +1520,9 @@ if (is_ios || is_mac) {
           ":darwin_privacy_info",
         ]
         if (target_environment != "xrdevice" && target_environment != "xrsimulator") {
-          deps += [ ":metal_objc" ]
+          # Uncomment the following line for metal support
+          # deps += [ ":metal_objc" ]
+          deps += [ ":opengl_ui_objc" ]
         }
         if (!build_with_chromium) {
           deps += [
